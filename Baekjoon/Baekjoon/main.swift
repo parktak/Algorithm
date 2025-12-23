@@ -8,25 +8,68 @@
 import Foundation
 
 /**
- B진법 수 N이 주어진다. 이 수를 10진법으로 바꿔 출력하는 프로그램을 작성하시오.
-
- 10진법을 넘어가는 진법은 숫자로 표시할 수 없는 자리가 있다. 이런 경우에는 다음과 같이 알파벳 대문자를 사용한다.
-
- A: 10, B: 11, ..., F: 15, ..., Y: 34, Z: 35
- input
- ZZZZZ 36
- 
- output
- 60466175
+ 알파벳 대소문자로 된 단어가 주어지면, 이 단어에서 가장 많이 사용된 알파벳이 무엇인지 알아내는 프로그램을 작성하시오. 단, 대문자와 소문자를 구분하지 않는다.
+ 첫째 줄에 알파벳 대소문자로 이루어진 단어가 주어진다. 주어지는 단어의 길이는 1,000,000을 넘지 않는다.
+ 첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.
  */
 
-let input = readLine()!.split(separator: " ")
-let rd = Int(input[1])!
-let result = input[0].reduce(0) { r, c in return r * rd + (c.wholeNumberValue ?? Int(c.asciiValue! - 55)) }
-print(result)
+let input = readLine()!
+var array = Array(repeating: 0, count: 26)
+var max = 0
+
+for byte in input.utf8 {
+    // 대문자
+    if byte >= 65 && byte <= 90 {
+        array[Int(byte - 65)] += 1
+    } else {
+        array[Int(byte - 97)] += 1
+    }
+}
+
+var maxIndex = -1
+var duplicated = false
+for i in 0..<26 {
+    if array[i] > max {
+        max = array[i]
+        maxIndex = i
+        duplicated = false
+    } else if array[i] == max && max != 0 {
+        duplicated = true
+    }
+}
+
+print(duplicated ? "?" : String(UnicodeScalar(maxIndex + 65)!))
 
 
 
+class Baekjoon {
+    
+    func sol() {
+        
+        /**
+         알파벳 대소문자로 된 단어가 주어지면, 이 단어에서 가장 많이 사용된 알파벳이 무엇인지 알아내는 프로그램을 작성하시오. 단, 대문자와 소문자를 구분하지 않는다.
+         첫째 줄에 알파벳 대소문자로 이루어진 단어가 주어진다. 주어지는 단어의 길이는 1,000,000을 넘지 않는다.
+         첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.
+         */
+
+        let input = readLine()!.uppercased()
+        var dict = [String.Element: Int]()
+        var max = 0
+        input.forEach { char in
+            if dict[char] == nil {
+                dict[char] = 1
+            } else {
+                dict[char]! += 1
+            }
+            if max <= dict[char]! {
+                max = dict[char]!
+            }
+        }
+        let result = dict.filter { $0.value == max }.keys
+        print(result.count == 1 ? String(result.first!) : "?")
+
+    }
+}
 class chess {
 
     func sol() {
