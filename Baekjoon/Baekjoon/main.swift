@@ -5,8 +5,21 @@
 //  Created by 박탁인 on 2025/12/23.
 //
 
-import Foundation
+//import Foundation
 
+
+
+/**
+ 7 7 7
+ 6 5 4
+ 3 2 5
+ 6 2 6
+ 0 0 0
+ Equilateral
+ Scalene
+ Invalid
+ Isosceles
+ */
 class Baekjoon {
     
     func sol() {
