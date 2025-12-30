@@ -7,6 +7,8 @@
 
 //import Foundation
 
+//let input = Int(readLine()!)!
+
 class Baekjoon {
     
     func sol() {

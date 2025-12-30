@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B88A76F92EFA57C200B72821 /* Formation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88A76F82EFA57BD00B72821 /* Formation.swift */; };
 		B8B222702F038C9700997D2C /* Backtracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B2226F2F038C9700997D2C /* Backtracking.swift */; };
+		B8B222722F039B1600997D2C /* BlackJack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B222712F039B1600997D2C /* BlackJack.swift */; };
 		FD82B4ED2EFF5B1F00E7C1EB /* ZOAC4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82B4EC2EFF5B1F00E7C1EB /* ZOAC4.swift */; };
 		FDD1096B2EF9DEE1004BF164 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1096A2EF9DEE1004BF164 /* main.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		B88A76F82EFA57BD00B72821 /* Formation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formation.swift; sourceTree = "<group>"; };
 		B8B2226F2F038C9700997D2C /* Backtracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backtracking.swift; sourceTree = "<group>"; };
+		B8B222712F039B1600997D2C /* BlackJack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJack.swift; sourceTree = "<group>"; };
 		FD82B4EC2EFF5B1F00E7C1EB /* ZOAC4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZOAC4.swift; sourceTree = "<group>"; };
 		FDD109672EF9DEE1004BF164 /* Baekjoon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Baekjoon; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD1096A2EF9DEE1004BF164 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -52,12 +54,13 @@
 			path = math;
 			sourceTree = "<group>";
 		};
-		B8B2226E2F038C7300997D2C /* Backtracking */ = {
+		B8B2226E2F038C7300997D2C /* Recursive */ = {
 			isa = PBXGroup;
 			children = (
 				B8B2226F2F038C9700997D2C /* Backtracking.swift */,
+				B8B222712F039B1600997D2C /* BlackJack.swift */,
 			);
-			path = Backtracking;
+			path = Recursive;
 			sourceTree = "<group>";
 		};
 		FD82B4EE2F00A40B00E7C1EB /* IT */ = {
@@ -87,7 +90,7 @@
 		FDD109692EF9DEE1004BF164 /* Baekjoon */ = {
 			isa = PBXGroup;
 			children = (
-				B8B2226E2F038C7300997D2C /* Backtracking */,
+				B8B2226E2F038C7300997D2C /* Recursive */,
 				FD82B4EE2F00A40B00E7C1EB /* IT */,
 				B88A76F72EFA57A300B72821 /* math */,
 				FDD1096A2EF9DEE1004BF164 /* main.swift */,
@@ -157,6 +160,7 @@
 				B8B222702F038C9700997D2C /* Backtracking.swift in Sources */,
 				B88A76F92EFA57C200B72821 /* Formation.swift in Sources */,
 				FD82B4ED2EFF5B1F00E7C1EB /* ZOAC4.swift in Sources */,
+				B8B222722F039B1600997D2C /* BlackJack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
