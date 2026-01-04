@@ -125,6 +125,7 @@ class Sort {
 
 
     func mergeSort() {
+        var numbers = [Int]()
         let n = 5
         func mergeSort(_ array : inout [Int], start: Int, end: Int) {
             if start >= end {
